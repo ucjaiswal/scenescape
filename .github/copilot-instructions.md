@@ -79,8 +79,7 @@ Treat AI-generated output as **untrusted draft code** until reviewed and tested.
 Reject suggestions that bypass security controls for convenience or introduce unsafe defaults.
 
 For detailed security review guidance, follow:
-`.github/skills/security.md` and
-`.github/prompts/scenescape-secure-code-review.prompt.md`.
+`.github/skills/security.md`.
 
 ## Architecture Overview
 

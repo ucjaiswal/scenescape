@@ -2,7 +2,7 @@
 
 ## Purpose
 This document defines on-demand security review guidance for code and configuration changes.
-It complements the always-on secure-by-default rules defined in `copilot-instructions.md`.
+It complements the always-on secure-by-default rules defined in `.github/copilot-instructions.md`.
 
 This skill applies only at development and authoring time.
 Runtime, host, cluster, or organizational security controls are explicitly out of scope.
@@ -84,7 +84,7 @@ If uncertainty exists, flag it clearly rather than guessing or assuming safety.
 
 ## Container Artifact Review (Development-Time)
 
-Apply when generating or reviewing 
+Apply when generating or reviewing:
 - Dockerfiles / Containerfiles
 - docker-compose.yml
 - Helm charts (templates and values)

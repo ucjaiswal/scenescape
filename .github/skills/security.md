@@ -1,6 +1,7 @@
 # Security Review Skill (On-Demand)
 
 ## Purpose
+
 This document defines on-demand security review guidance for code and configuration changes.
 It complements the always-on secure-by-default rules defined in `.github/copilot-instructions.md`.
 
@@ -46,6 +47,7 @@ When reviewing AI-generated changes:
 Apply when reviewing application logic, services, APIs, or libraries.
 
 ### Input handling
+
 - Validate input at trust boundaries (format, type, range, length)
 - Avoid unsafe deserialization
 - Do not propagate unvalidated input across trust boundaries
@@ -53,14 +55,17 @@ Apply when reviewing application logic, services, APIs, or libraries.
 - Use parameterized queries for all database access
 
 ### Authorization
+
 - **Keep authorization checks server-side and close to protected actions or resources**
 - Do not rely on client-side enforcement for access control
 
 ### Error handling
+
 - Errors must not expose sensitive internal details
 - Avoid ignored return values or silent failures
 
 ### Memory & resource safety (where applicable)
+
 - Avoid unchecked allocations and unbounded resource use
 - Ensure files, sockets, and handles are closed deterministically
 
@@ -69,14 +74,17 @@ Apply when reviewing application logic, services, APIs, or libraries.
 - Logs should be actionable without exposing sensitive data
 
 ### Dynamic execution
+
 - **Avoid unsafe dynamic execution patterns (`eval`, `exec`, reflection, or untrusted code execution).**
 
 ### Dependency usage
+
 - Avoid shelling out when native APIs or libraries exist
 - Flag outdated, unmaintained, or suspicious dependencies
 - Prefer latest stable versions; specify exact or range-locked versions
 
 ### OSS-specific review checks
+
 - Is externally observable **security-relevant behavior** documented?
 - Are assumptions and limitations stated explicitly for users?
 
@@ -87,6 +95,7 @@ If uncertainty exists, flag it clearly rather than guessing or assuming safety.
 ## Container Artifact Review (Development-Time)
 
 Apply when generating or reviewing:
+
 - Dockerfiles / Containerfiles
 - docker-compose.yml
 - Helm charts (templates and values)

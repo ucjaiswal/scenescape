@@ -70,6 +70,7 @@ Apply when reviewing application logic, services, APIs, or libraries.
 - Ensure files, sockets, and handles are closed deterministically
 
 ### Logging & telemetry
+
 - Do not log credentials, tokens, secrets, or PII
 - Logs should be actionable without exposing sensitive data
 
